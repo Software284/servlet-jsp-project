@@ -1,0 +1,23 @@
+package com.lamichhane.service;
+
+import java.util.List;
+
+import com.lamichhane.modal.LoginModal;
+import com.lamichhane.modal.UserInfo;
+
+public class DataServiceImpl implements DataService
+{
+
+	@Override
+	public List<LoginModal> getAllLoginData()
+	{
+		return null;
+	}
+
+	@Override
+	public List<UserInfo> getAllUserData() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

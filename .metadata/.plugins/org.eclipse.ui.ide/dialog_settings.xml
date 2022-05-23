@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="201"/>
+		<item key="DIALOG_Y_ORIGIN" value="197"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Mahesh Lamichhane\Desktop\Crud Operations\Crud Operation Using Struts"/>
+			<item value="C:\Users\Mahesh Lamichhane\Desktop\Crud Operations\Crud Operation Using Simple Core Java Program"/>
+			<item value="C:\Users\Mahesh Lamichhane\Desktop\Crud Operations\Crud Operation Using Jsp"/>
+			<item value="C:\Users\Mahesh Lamichhane\Desktop\Crud Operations\Crud Operation Using Servlet"/>
+			<item value="C:\Users\Mahesh Lamichhane\Desktop\desktop app\Pos and Inventory System"/>
+			<item value="C:\Users\Mahesh Lamichhane\Desktop\desktop app\Village Meat Hub Supplier"/>
+			<item value="C:\Users\Mahesh Lamichhane\Desktop\Crud Operations\Crud Operation Using Jsp and JSTL"/>
+			<item value="F:\[FreeCourseSite.com] Udemy - Spring &amp; Hibernate for Beginners (includes Spring Boot)\28. Build a Database Web App - Spring MVC and Hibernate Project - Part 1\11.1 solution-code-spring-mvc-CRUD-CRM-setup-and-test.zip"/>
+			<item value="C:\Users\Mahesh Lamichhane\Desktop\Crud Operations\spring mvc"/>
+			<item value="F:\[FreeCourseSite.com] Udemy - Spring &amp; Hibernate for Beginners (includes Spring Boot)\11. Spring MVC - Building Spring Web Apps\4.1 solution-code-spring-mvc-config-files.zip"/>
+			<item value="C:\Users\Mahesh Lamichhane\Desktop\SpringMVCFormValidation-master"/>
+			<item value="C:\Users\Mahesh Lamichhane\Desktop\Crud Operations\Crud With Hibernate Lamo"/>
+			<item value="C:\Users\Mahesh Lamichhane\Desktop\Crud Operations\CrudOperationUsingJdbcTemplate"/>
+			<item value="C:\Users\Mahesh Lamichhane\Desktop\Crud Operations\Crud Operation Using Hibernate"/>
+			<item value="F:\[FreeCourseSite.com] Udemy - Spring &amp; Hibernate for Beginners (includes Spring Boot)\29. Build a Database Web App - Spring MVC and Hibernate Project - Part 2\14.1 solution-code-spring-mvc-CRUD-CRM-list-customers.zip"/>
+			<item value="C:\Users\Mahesh Lamichhane\Desktop\Crud Operations\Crud Operation Using jdbcTemplate"/>
+			<item value="C:\Users\Mahesh Lamichhane\Desktop\Crud Operations\Crud Operation Using Spring Mvc and hibernate"/>
+		</list>
+	</section>
+</section>

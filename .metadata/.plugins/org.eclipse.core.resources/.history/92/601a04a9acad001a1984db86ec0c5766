@@ -1,0 +1,30 @@
+package com.lamichhane.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.lamichhane.dao.DataDao;
+import com.lamichhane.modal.LoginModal;
+import com.lamichhane.modal.UserInfo;
+
+@Service
+public class DataServiceImpl implements DataService
+{
+	@Autowired
+	private DataDao dataDao;
+
+	@Override
+	public List<LoginModal> getAllLoginData()
+	{
+		return dataDao.getAllLoginData();
+	}
+
+	@Override
+	public List<UserInfo> getAllUserData()
+	{
+		return dataDao.getAllUserData();
+	}
+
+}

@@ -1,0 +1,55 @@
+package com.lamichhane.dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.lamichhane.modal.LoginModal;
+import com.lamichhane.modal.UserInfo;
+
+@Repository
+public class DataDaoImpl implements DataDao
+{
+	@Autowired
+	SessionFactory sessionFactory;
+
+	@Override
+	public List<LoginModal> getAllLoginData()
+	{
+		Session session=sessionFactory.getCurrentSession();
+		Query<LoginModal> theQuery=session.createQuery("from LoginModal",LoginModal.class);
+		List<LoginModal> list=theQuery.getResultList();
+		return list;
+	}
+	
+	@Override
+	public List<UserInfo> getAllUserData()
+	{
+		Session session=sessionFactory.getCurrentSession();
+		Query<UserInfo> theQuery=session.createQuery("from UserInfo order by id",UserInfo.class);
+		List<UserInfo> list=theQuery.getResultList();
+		return list;
+	}
+
+	@Override
+	public void saveUserInformation(UserInfo f)
+	{
+		Session session=sessionFactory.getCurrentSession();
+		session.saveOrUpdate(f);
+		
+	}
+
+	@Override
+	public UserInfo getUserInformation(int id) 
+	{
+	   Session session=sessionFactory.getCurrentSession();
+	   UserInfo info=session.get(UserInfo.class, id);
+	   return info;
+	}
+
+}

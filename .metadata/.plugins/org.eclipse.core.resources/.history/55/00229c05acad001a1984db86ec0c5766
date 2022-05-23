@@ -1,0 +1,6 @@
+package com.lamichhane.service;
+
+public class DataServiceImpl implements DataService
+{
+
+}

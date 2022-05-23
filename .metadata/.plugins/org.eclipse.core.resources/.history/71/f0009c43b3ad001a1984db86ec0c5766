@@ -1,0 +1,98 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/style.css">
+</head>
+<body>
+
+
+     
+    
+   
+   <div class="header">
+   	<ul>
+   		<li><a href="#">My Blog</a></li>
+   		<li><a href="#">Home</a></li>
+   		<li class="dropdown">
+   			<a href="#" class="dropbtn" >Posts</a>
+   			<div class="dropdown-content">
+   				<a href="#">Link1</a>
+   				<a href="#">Link2</a>
+   				<a href="#">Link3</a>
+   			</div>
+   		</li>
+   		<li class="dropdown">
+   			<a href="#" class="dropbtn">Authors</a>
+   			<div class="dropdown-content">
+   				<a href="#">Link1</a>
+   				<a href="#">Link2</a>
+   				<a href="#">Link3</a>
+   			</div>
+
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Admin</a>
+        <div class="dropdown-content">
+          <a href="#">Link1</a>
+          <a href="#">Link2</a>
+          <a href="#">Link3</a>
+        </div>
+      </li>
+   		<li class="right">User|<a href="logout">logout</a></li>
+   	</ul>
+   </div>
+   <h1>Posts</h1>
+   <form>
+     <table>
+        <thead>
+           <tr>
+        	 <td>Id</td>
+             <td>Name</td>
+             <td>Phone</td>
+             <td>Email</td>
+             <td>Gender</td>
+             <td>College</td>
+             <td>Address</td>
+             <td>Update</td>
+             <td>Delete</td>
+           </tr>
+        </thead>
+        <tbody>
+        
+        <c:forEach var="table" items="${list}">  
+             <tr>  
+                  <td>${table.id}</td> 
+                  <td>${table.name/></td> 
+                  <td>${table.email>}</td> 
+                  <td>${table.gender}</td>  
+                  <td>${table.college}</td>  
+                 <td>${table.address}</td>  
+                 <td><a href="updatepage?id=${table.id}">Update</a></td>  
+                 <td><a href="delete?id=${table.id}">Delete</a></td>
+            </tr>  
+        </c:forEach>  
+       </tbody>
+     </table>
+   </form>
+
+   <a href="newpost" style="margin-left: 10%;">Add New Post</a>
+   
+   <div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="pagination?page=1">1</a>
+  <a href="pagination?page=2">2</a>
+  <a href="pagination?page=3">3</a>
+  <a href="pagination?page=4">4</a>
+  <a href="pagination?page=5">5</a>
+  <a href="pagination?page=6">6</a>
+  <a href="#">&raquo;</a>
+</div>
+
+</body>
+</html>

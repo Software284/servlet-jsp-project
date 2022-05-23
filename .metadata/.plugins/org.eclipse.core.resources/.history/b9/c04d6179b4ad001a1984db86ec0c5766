@@ -1,0 +1,119 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+
+
+  
+
+    
+    
+  
+  </style>
+</head>
+<body>
+
+  
+   <div class="header">
+    <ul>
+      <li><a href="#">My Blog</a></li>
+      <li><a href="#">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn" >Posts</a>
+        <div class="dropdown-content">
+          <a href="#">Link1</a>
+          <a href="#">Link2</a>
+          <a href="#">Link3</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Authors</a>
+        <div class="dropdown-content">
+          <a href="#">Link1</a>
+          <a href="#">Link2</a>
+          <a href="#">Link3</a>
+        </div>
+
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Admin</a>
+        <div class="dropdown-content">
+          <a href="#">Link1</a>
+          <a href="#">Link2</a>
+          <a href="#">Link3</a>
+        </div>
+      </li>
+
+      <li class="right"><c:out value="${sessionScope.username}"/>|<a href="logout">logout</a></li>
+    </ul>
+   </div>
+   <h1>Create a new post</h1>
+     <div class="container">
+  <form action="insertdata" method="post">
+  <div class="row">
+    <div class="col-25">
+      <label for="title">Title</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="title" name="title" placeholder="Your title..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="postedon">Posted On</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="postedon" name="postedon" placeholder="Posted date..">
+    </div>
+  </div>
+   <div class="row">
+    <div class="col-25">
+      <label for="keyword">Keyword</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="keyword" name="keyword" placeholder="Type keyword..">
+    </div>
+   </div>
+    <div class="row">
+    <div class="col-25">
+      <label for="active">Active</label>
+    </div>
+    <div class="col-75">
+      <input type="checkbox" style="margin-top:15px;" id="active" name="active" value="1">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Author</label>
+    </div>
+    <div class="col-75">
+      <select id="name" name="author">
+        <option value="Mahesh Lamichhane">Mahesh Lamichhane</option>
+        <option value="Daring Pits">Daring Pits</option>
+        <option value="Nabin Sharma">Nabin Sharma</option>
+      </select>
+    </div>
+  </div>
+    <div class="row">
+    <div class="col-25">
+      <label for="body">Body</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="bodydata" placeholder="Write something.." style="height:160px"></textarea>
+    </div>
+  </div>  
+  <div class="row">
+    <input type="submit" value="Submit" name="submit" id="submit">
+  </div>
+  </form>
+  </div>
+
+
+</body>
+</html>

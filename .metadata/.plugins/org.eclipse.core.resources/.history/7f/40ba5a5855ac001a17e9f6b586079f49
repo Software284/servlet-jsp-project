@@ -1,0 +1,15 @@
+package com.lamichhane.dao;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.lamichhane.modal.LoginModal;
+import com.lamichhane.modal.UserInfo;
+
+@Component
+public interface DataDao
+{
+	public List<LoginModal> getAllLoginData();
+	public List<UserInfo> getAllUserData();
+}

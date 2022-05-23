@@ -1,0 +1,6 @@
+package com.lamichhane.springsecurity.controller;
+
+@Controller
+public class DemoController {
+
+}

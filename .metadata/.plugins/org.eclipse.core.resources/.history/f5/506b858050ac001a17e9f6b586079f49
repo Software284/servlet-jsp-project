@@ -1,0 +1,6 @@
+package com.lamichhane.dao;
+
+public interface DataDao
+{
+	public List<LoginModal> getAllLoginData();
+}

@@ -1,0 +1,5 @@
+package com.lamichhane.service;
+
+public interface DataService {
+
+}

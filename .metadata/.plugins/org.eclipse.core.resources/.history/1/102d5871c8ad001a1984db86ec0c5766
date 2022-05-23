@@ -1,0 +1,279 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    .header
+    {
+        width: 80%;
+        height:50px;
+        margin-left: 10%;
+      background-color: #ccff99;
+      padding:0px;
+    }
+    ul
+    {
+
+      margin:0px;
+      padding:0px;
+      
+    }
+    ul li
+    {
+      display: inline-block;
+      margin-top: 10px;     margin-left: 5px;
+      padding: 5px;
+      list-style-type: none;
+      margin-right: 5px;
+
+    }
+    ul li a
+    {
+      color:#fff;
+      text-decoration: none;
+      font-size: 19px;
+      color:#000;
+    }
+    ul li.right
+    {
+      float:right;
+    }
+    h1
+    {
+      margin-left:10%;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+    form
+    {
+      margin-left: 10%;
+    }
+    input[type=text]
+    {
+      padding:9px 12px;
+    }
+      textarea
+    {
+      padding:12px 20px;
+    }
+
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+  @Media(max-width: 700px)
+  {
+    .header ul li a 
+    {
+      font-size: 15px;
+    }
+  }
+   @Media(max-width: 400px)
+  {
+    .header ul li a 
+    {
+      font-size: 10px;
+    }
+    
+  }
+ * {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-top: 10px;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width:90%;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+  
+
+    
+    
+  
+  </style>
+</head>
+<body>
+   <c:set var="dat" value="${my_data}"/>
+   <div class="header">
+    <ul>
+      <li><a href="#">My Blog</a></li>
+      <li><a href="#">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn" >Posts</a>
+        <div class="dropdown-content">
+          <a href="#">Link1</a>
+          <a href="#">Link2</a>
+          <a href="#">Link3</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Authors</a>
+        <div class="dropdown-content">
+          <a href="#">Link1</a>
+          <a href="#">Link2</a>
+          <a href="#">Link3</a>
+        </div>
+
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Admin</a>
+        <div class="dropdown-content">
+          <a href="#">Link1</a>
+          <a href="#">Link2</a>
+          <a href="#">Link3</a>
+        </div>
+      </li>
+
+      </li>
+      <li class="right">${sessionScope.username}|<a href="logout.action">logout</a></li>
+    </ul>
+   </div>
+   <h1>Create a new user</h1>
+     <div class="container">
+  <form action="insert" method="post">
+  <div class="row">
+    <div class="col-25">
+      <label for=name"">Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="name" name="name" placeholder="Your name...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="phone">Phone</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="phone" name="phone" placeholder="Phone number..">
+    </div>
+  </div>
+   <div class="row">
+    <div class="col-25">
+      <label for="email">email</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="email" name="email" placeholder="Type email..">
+    </div>
+   </div>
+    <div class="row">
+    <div class="col-25">
+      <label for="active">Gender</label>
+    </div>
+    <div class="col-75">
+      <input type="radio" style="margin-top:15px;"  name="gender" value="male">Male
+      <input type="radio" style="margin-top:15px;"  name="gender" value="female">Female
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="country">College</label>
+    </div>
+    <div class="col-75">
+      <select id="name" name="college">
+        <option value="NCIT">NCIT</option>
+        <option value="Pulchowk">Pulchowk</option>
+        <option value="WRC">WRC</option>
+      </select>
+    </div>
+    <div class="row">
+    <div class="col-25">
+      <label for="body">Body</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="address" placeholder="Write address.." name="address" style="height:160px"></textarea>
+    </div>
+  </div>
+</div>
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
+</div>

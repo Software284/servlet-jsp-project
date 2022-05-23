@@ -1,0 +1,13 @@
+package com.lamichhane.service;
+
+import java.util.List;
+
+import com.lamichhane.modal.LoginModal;
+import com.lamichhane.modal.UserInfo;
+
+public interface DataService
+{
+	public List<LoginModal> getAllLoginData();
+	public List<UserInfo> getAllUserData();
+
+}

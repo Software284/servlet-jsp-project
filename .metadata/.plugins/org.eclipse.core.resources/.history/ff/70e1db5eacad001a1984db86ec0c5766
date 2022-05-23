@@ -1,0 +1,47 @@
+package com.lamichhane.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.lamichhane.dao.DataDao;
+import com.lamichhane.modal.LoginModal;
+import com.lamichhane.modal.UserInfo;
+
+@Controller
+@Component
+public class MyController
+{
+	@Autowired
+	private DataDao dataDao;
+	
+	
+	@RequestMapping("/login")
+	public String LoginPage(@RequestParam("username") String user,@RequestParam("password") String pass,Model model)
+	{
+		List<LoginModal> list=dataDao.getAllLoginData();
+		List<UserInfo> datalist=dataDao.getAllUserData();
+		String data=null;
+		for(LoginModal mod:list)
+		{
+			if(mod.getPassword().equals(pass) && mod.getUsername().equals(user))
+			{
+				data="main";
+			}
+			else
+			{
+				data="index";
+			}
+		}
+		model.addAttribute("user_list",datalist);
+		return data;
+		
+	}
+	
+
+}

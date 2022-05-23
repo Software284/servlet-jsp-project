@@ -1,0 +1,5 @@
+package com.lamichhane.springsecurity.config;
+
+public class DemoAppConfig {
+
+}

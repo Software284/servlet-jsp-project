@@ -1,0 +1,10 @@
+package com.lamichhane.dao;
+
+import java.util.List;
+
+import com.lamichhane.modal.LoginModal;
+
+public interface DataDao
+{
+	public List<LoginModal> getAllLoginData();
+}

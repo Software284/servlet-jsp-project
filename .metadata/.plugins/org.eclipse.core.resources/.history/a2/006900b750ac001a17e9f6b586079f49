@@ -1,0 +1,17 @@
+package com.lamichhane.dao;
+
+import java.util.List;
+
+import com.lamichhane.modal.LoginModal;
+
+public class DataDaoImpl implements DataDao
+{
+	SessionFactory sessionFactory;
+
+	@Override
+	public List<LoginModal> getAllLoginData()
+	{
+		return null;
+	}
+
+}

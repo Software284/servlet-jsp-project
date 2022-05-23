@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/style.css">
+</head>
+<body>
+   <div class="header">
+   	<ul>
+   		<li><a href="#">My Blog</a></li>
+   		<li><a href="#">Home</a></li>
+   		<li class="dropdown">
+   			<a href="#" class="dropbtn" >Posts</a>
+   			<div class="dropdown-content">
+   				<a href="#">Link1</a>
+   				<a href="#">Link2</a>
+   				<a href="#">Link3</a>
+   			</div>
+   		</li>
+   		<li class="dropdown">
+   			<a href="#" class="dropbtn">Authors</a>
+   			<div class="dropdown-content">
+   				<a href="#">Link1</a>
+   				<a href="#">Link2</a>
+   				<a href="#">Link3</a>
+   			</div>
+
+   		</li>
+   		<li class="right">User|<a href="#">logout</a></li>
+   	</ul>
+   </div>
+   <h1>Please Sign in</h1>
+   <form action="login" method="post">
+  <input type="text" id="username" name="username" placeholder="Username...">
+  <input type="text" id="lname" name="password" placeholder="Password..">
+  <input type="hidden" name="page" value="1"/>
+  <input type="checkbox" name="">Remember Me
+  <input type="submit" value="Sign in">
+</form>
+   <h2>Sorry Error Occured</h2>
+   
+</body>
+</html>
